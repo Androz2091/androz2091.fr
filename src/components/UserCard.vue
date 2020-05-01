@@ -1,21 +1,18 @@
 <template>
-<div>
-    <div class="container">
-        <b-jumbotron class="text-white text-responsive">
-            <div class="userinfo">
-                <img src="https://cdn.discordapp.com/icons/558328638911545423/a_a7e5bf196af7a6ab8830533d6dc4677b.gif" class="avatar">
-                <h1 class="name">Androz2091 <span class="badge badge-blurple">DEVELOPER</span>
-                    <p class="bio">{{ bio }}</p>
-                </h1>
-            </div>
-            <div class="social">
-                <button class="btn btn-github" @click="open('github')"><i class="fab fa-github"></i> GitHub</button>
-                <button class="btn btn-npm" @click="open('twitter')"><i class="fab fa-node-js"></i> NPM</button>
-                <button class="btn btn-discord" @click="open('discord')"><i class="fab fa-discord"></i> Discord</button>
-            </div>
-        </b-jumbotron>
-    </div>
-    <br>
+<div class="container">
+    <b-jumbotron class="text-white text-responsive">
+        <div class="userinfo">
+            <img src="https://cdn.discordapp.com/icons/558328638911545423/a_a7e5bf196af7a6ab8830533d6dc4677b.gif" class="avatar">
+            <h1 class="name">Androz2091 <span class="badge badge-blurple">DEVELOPER</span>
+                <p class="bio">{{ bio }}</p>
+            </h1>
+        </div>
+        <div class="social">
+            <button class="btn btn-github" @click="open('github')"><i class="fab fa-github"></i> GitHub</button>
+            <button class="btn btn-npm" @click="open('twitter')"><i class="fab fa-node-js"></i> NPM</button>
+            <button class="btn btn-discord" @click="open('discord')"><i class="fab fa-discord"></i> Discord</button>
+        </div>
+    </b-jumbotron>
 </div>
 </template>
 
