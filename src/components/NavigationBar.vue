@@ -7,8 +7,8 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
-            <b-nav-item href="#">Link</b-nav-item>
-            <b-nav-item href="#">Link</b-nav-item>
+            <router-link class="nav-link" to="/">Home</router-link>
+            <router-link class="nav-link" to="/projects" exact :style="{ cursor: 'pointer'}">Github</router-link>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

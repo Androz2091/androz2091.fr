@@ -3,13 +3,13 @@
     <b-jumbotron class="text-white text-responsive">
         <div class="userinfo">
             <img src="https://cdn.discordapp.com/icons/558328638911545423/a_a7e5bf196af7a6ab8830533d6dc4677b.gif" class="avatar">
-            <h1 class="name">Androz2091 <span class="badge badge-blurple">DEVELOPER</span>
+            <h1 class="name">Androz2091 <span class="badge badge-blurple">USER</span>
                 <p class="bio">{{ bio }}</p>
             </h1>
         </div>
         <div class="social">
             <button class="btn btn-github" @click="open('github')"><i class="fab fa-github"></i> GitHub</button>
-            <button class="btn btn-npm" @click="open('twitter')"><i class="fab fa-node-js"></i> NPM</button>
+            <button class="btn btn-twitter" @click="open('twitter')"><i class="fab fa-node-js"></i> Twitter</button>
             <button class="btn btn-discord" @click="open('discord')"><i class="fab fa-discord"></i> Discord</button>
         </div>
     </b-jumbotron>
@@ -23,7 +23,7 @@ type Network = 'github' | 'twitter' | 'discord';
 
 @Component
 export default class HelloWorld extends Vue {
-    bio = "Hello! I'm Androz2091, from France. Coding addicted, I love Node.js and programming around Discord."
+    bio = "Hello! I'm Androz2091, from France. Coding addicted, I love Node.js, TypeScript and in general programming around Discord."
 
     public open (network: Network) {
         if (network === 'github') {
@@ -31,7 +31,7 @@ export default class HelloWorld extends Vue {
         } else if (network === 'twitter') {
             window.open('https://twitter.com/@2091_androz')
         } else if (network === 'discord') {
-            window.open('https://discord.gg/androz')
+            window.open('https://discord.gg/hw87VUQ')
         }
     }
 }
@@ -88,22 +88,22 @@ button:hover {
 }
 
 .btn-github {
-    background-color: #797979;
+    background-color: #737373;
     color: #FFFFFF;
 }
 
 .btn-github:hover {
-    background-color: #5c5959;
+    background-color: #595959;
     color: #FFFFFF;
 }
 
-.btn-npm {
-    background-color: #e75050;
+.btn-twitter {
+    background-color: #49A1F3;
     color: #FFFFFF;
 }
 
-.btn-npm:hover {
-    background-color: #b63b3b;
+.btn-twitter:hover {
+    background-color: #0e76d7;
     color: #FFFFFF;
 }
 
