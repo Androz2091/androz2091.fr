@@ -22,8 +22,18 @@
             </b-badge>
         </h5>
         <hr>-->
-        <b-button href="#" variant="primary">Open on Github</b-button>
-        <b-button href="#" variant="warning" disabled>80 stars</b-button>
+        <a :href="`https://github.com/${github.owner}/${github.repo}`" target="_blank">
+            <b-button variant="primary">
+                Open on Github
+            </b-button>
+        </a>
+        <a :href="`https://github.com/${github.owner}/${github.repo}`" target="_blank">
+            <b-button variant="warning">
+                <b-spinner small v-if="fetching"></b-spinner>
+                <template v-if="!fetching">{{ stars }}</template>
+                <font-awesome-icon icon="star" />
+            </b-button>
+        </a>
     </template>
 </b-card>
 </template>
@@ -31,16 +41,39 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
+interface GithubData {
+    owner: string;
+    repo: string;
+}
+
 @Component
 export default class HelloWorld extends Vue {
     @Prop() private name!: string;
     @Prop() private img!: string;
     @Prop() private description!: object;
     @Prop() private badges!: object;
+    @Prop() private github!: GithubData;
+    public fetching = true;
+    public stars = 0;
+
+    mounted () {
+        setTimeout(() => {
+            this.$http
+                .get(`${this.github.owner}/${this.github.repo}`)
+                .then((response) => {
+                    this.stars = response.data.stargazers_count
+                    this.fetching = false
+                })
+        }, (2000))
+    }
 }
 </script>
 
 <style>
+svg {
+    margin-left: 10px;
+}
+
 h6 {
     color: white;
 }
