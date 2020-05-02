@@ -4,7 +4,9 @@
         <UserCard/>
         <br/><br/><br/><br/><br/>
         <h1 class="title">🔥 Current projects</h1>
-        <br/><br/><br/>
+        <br/>
+        <h5>My best projects which I'm still working on!</h5>
+        <br/><br/>
         <b-container class="bv-example-row">
             <b-row>
                 <b-col v-for="(project, i) in projects" v-bind:key="`${i}-${project.name}`">
@@ -68,6 +70,11 @@ export default class Home extends Vue {
 </script>
 
 <style scoped>
+h3 {
+    text-align: center;
+    color: white;
+}
+
 .title {
     text-align: center;
     color: white;
